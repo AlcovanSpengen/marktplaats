@@ -27,6 +27,28 @@
         <li><a href="advertentie.html">Plaats advertentie</a></li>
     </ul>
 </nav>
+<form>
+        <div class="searchbar">
+            <input type="text" name="search" placeholder="Search..">
+            <select name="rubriek"><br>
+                <option value="elektronica">Alle rubrieken</option>
+                <option value="elektronica">Elektronica</option>
+                <option value="cd's en dvd's">Cd's en Dvd's</option>
+                <option value="fietsen en brommers">Fietsen en Brommers</option>
+                <option value="sport en fitness">Sport en Fitness</option>
+        </select>
+            <select name="afstand">
+                <option value="alle afstanden">Alle afstanden</option>
+                <option value="minder dan 3km">minder dan 3km</option>
+                <option value="minder dan 5km">minder dan 5km</option>
+                <option value="minder dan 10km">minder dan 10km</option>
+                <option value="minder dan 15km">minder dan 15km</option>
+                <option value="minder dan 25km">minder dan 25km</option>
+                <option value="minder dan 50km">minder dan 50km</option>
+            </select>
+            <input type="submit" name="search" value="Search"> 
+        </div>
+    </form>
 </header>
 <body>
     <section class="loginform">
@@ -36,7 +58,8 @@
         <input type="text" name="pwd" placeholder="Password...">
         <button type="submit" name="login-submit">Login</button>
         </form>
-        <a href="signup.html">Signup</a>
+        <a href="signup.html">Aanmelden</a>
+        <a href="wachtwoordvergeten.html">Wachtwoord vergeten?</a>
         <form action="logout.php" method="post">
         <button class="submit" type="submit" name="logout-submit">Logout</button>
         </form>

@@ -3,12 +3,12 @@
     font-family: "Roboto Slab", serif;
 }
 body {
-    background: rgb(231, 148, 80);
+    background: rgb(255, 255, 255);
 }
 h1 {
-    font-size: 30;
+    font-size: 25;
+    text-align: center;
 }
-
 /* NAV */
 nav {
     overflow: hidden;
@@ -83,11 +83,37 @@ nav a:hover, .dropdown:hover .dropbtn {
 .dropdown:hover .dropdown-content {
     display: block;
   }
+/* SEARCHBAR */
+.searchbar {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    background: gray;
+}
+.searchbar input[type=text] {
+    width: 200px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin: 20px;
+    padding: 5px;
+}
+.searchbar select {
+    padding: 5px;
+    margin: 20px;
+}
+.searchbar input[type=submit] {
+    padding: 5px;
+    margin: 20px;
+}
+
+.searchbar input[type=text]:hover {
+    width: 40%;
+}
 
 /* FORM LOGIN */
 .loginform {
     padding: 50px;
-    background: rgb(250, 170, 104);
+    background: rgb(204, 204, 204);
     border: 2px solid black;
     text-align: center;
 }
@@ -97,11 +123,15 @@ nav a:hover, .dropdown:hover .dropbtn {
     padding: 12px 20px;
     margin-bottom: 20px;
 }
+.loginform a {
+    padding: 20px;
+    margin: 20px;
+}
 .loginform button {
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px;
-    margin: 5px;
+    margin: 20px;
 }
 .loginform button:hover {
     background-color: rgb(187, 184, 184);
@@ -110,7 +140,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 .aanmelden {
     text-align: center;
     padding: 50px;
-    background:  rgb(250, 170, 104);
+    background:  rgb(204, 204, 204);
     border: 2px solid black;
 }
 .aanmelden input {
@@ -125,6 +155,23 @@ nav a:hover, .dropdown:hover .dropbtn {
 .nieuwadv {
     text-align: center;
     padding: 50px;
-    background:  rgb(250, 170, 104);
+    background:  rgb(204, 204, 204);
     border: 2px solid black;
+}
+.nieuwadv form input {
+    margin: 5px;
+    
+}
+.nieuwadv h2 {
+    font-size: 20;
+}
+.thumb-image {
+    width: 200px;
+    position: relative;
+    padding: 5px;
+    background: black;
+   }
+
+#image-holder {
+    background: rgb(167, 163, 163);
 }
