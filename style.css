@@ -1,0 +1,130 @@
+/* GENERAL */
+* {
+    font-family: "Roboto Slab", serif;
+}
+body {
+    background: rgb(231, 148, 80);
+}
+h1 {
+    font-size: 30;
+}
+
+/* NAV */
+nav {
+    overflow: hidden;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+/* DROPDOWN NAV */
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+.dropdown .dropbtn {
+    font-size: 16px; 
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0; 
+  }
+    
+nav a:hover, .dropdown:hover .dropbtn {
+    background-color: #111;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/* FORM LOGIN */
+.loginform {
+    padding: 50px;
+    background: rgb(250, 170, 104);
+    border: 2px solid black;
+    text-align: center;
+}
+
+.loginform input {
+    width: 30%;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+}
+.loginform button {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+.loginform button:hover {
+    background-color: rgb(187, 184, 184);
+}
+/* FORM SIGNUP */
+.aanmelden {
+    text-align: center;
+    padding: 50px;
+    background:  rgb(250, 170, 104);
+    border: 2px solid black;
+}
+.aanmelden input {
+    width: 30%;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+  }
+
+  /* NIEUWE ADVERTENTIE */
+.nieuwadv {
+    text-align: center;
+    padding: 50px;
+    background:  rgb(250, 170, 104);
+    border: 2px solid black;
+}
