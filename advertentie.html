@@ -28,33 +28,33 @@
         <li><a href="advertentie.html">Plaats Advertentie</a></li>
     </ul>
 </nav>
-    <form>
-        <div class="searchbar">
-            <input type="text" name="search" placeholder="Search..">
-            <select name="rubriek"><br>
-                <option value="Alle rubrieken">Alle rubrieken</option>
-                <option value="elektronica">Elektronica</option>
-                <option value="cd's en dvd's">Cd's en Dvd's</option>
-                <option value="fietsen en brommers">Fietsen en Brommers</option>
-                <option value="sport en fitness">Sport en Fitness</option>
+<form action="searched.php" method="post">
+    <div class="searchbar">
+        <input type="text" name="productname" placeholder="Search..">
+        <select name="rubriek"><br>
+            <option value="elektronica">Alle rubrieken</option>
+            <option value="elektronica">Elektronica</option>
+            <option value="cd's en dvd's">Cd's en Dvd's</option>
+            <option value="fietsen en brommers">Fietsen en Brommers</option>
+            <option value="sport en fitness">Sport en Fitness</option>
+    </select>
+        <select name="afstand">
+            <option value="alle afstanden">Alle afstanden</option>
+            <option value="minder dan 3km">minder dan 3km</option>
+            <option value="minder dan 5km">minder dan 5km</option>
+            <option value="minder dan 10km">minder dan 10km</option>
+            <option value="minder dan 15km">minder dan 15km</option>
+            <option value="minder dan 25km">minder dan 25km</option>
+            <option value="minder dan 50km">minder dan 50km</option>
         </select>
-            <select name="afstand">
-                <option value="alle afstanden">Alle afstanden</option>
-                <option value="minder dan 3km">minder dan 3km</option>
-                <option value="minder dan 5km">minder dan 5km</option>
-                <option value="minder dan 10km">minder dan 10km</option>
-                <option value="minder dan 15km">minder dan 15km</option>
-                <option value="minder dan 25km">minder dan 25km</option>
-                <option value="minder dan 50km">minder dan 50km</option>
-            </select>
-            <input type="submit" name="search" value="Search"> 
-        </div>
-    </form>
+        <input type="submit" name="afstandbtn" value="Search"> 
+    </div>
+</form>
 </header>
 <body>
     <h1>Nieuwe Advertentie</h1>
     <section class="nieuwadv">
-        <form action="#">
+        <form action="geplaatst.php" method="post" enctype="multipart/form-data">
             <h2>Selecteer de juiste rubriek:</h2>
                 <select name="rubriek"><br>
                         <option value="elektronica">elektronica</option>
@@ -63,18 +63,18 @@
                         <option value="sport en fitness">sport en fitness</option>
                 </select><br>
             <h2>Titel</h2>
-                <input type="text"><br>
+                <input type="text" name="naamadvertentie" required><br>
             <h2>Beschrijving</h2>
-                <textarea rows="5" cols="30" required></textarea><br>
+                <textarea name="beschrijvingadvertentie" rows="5" cols="30" required></textarea><br>
             <h2>Prijs</h2>
-                <input type="text">
-            <h2>Upload Foto's</h2>
+                <input type="text" name="prijs">
+            <h2>Upload Foto's(met preview)</h2>
                 <div id="wrapper">
-                    <input id="fileUpload" type="file" multiple />
+                    <input id="fileToUpload" name="fileToUpload" type="file" multiple />
                     <br />
                     <div id="image-holder"></div>
                 </div>
-                <input type="submit" value="Plaats advertentie">
+                <input type="submit" value="Plaats advertentie" name="submit">
 
             
         </form>

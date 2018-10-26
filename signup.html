@@ -27,61 +27,39 @@
         <li><a href="advertentie.html">Plaats advertentie</a></li>
     </ul>
 </nav>
-<form>
-        <div class="searchbar">
-            <input type="text" name="search" placeholder="Search..">
-            <select name="rubriek"><br>
-                <option value="Alle rubrieken">Alle rubrieken</option>
-                <option value="elektronica">Elektronica</option>
-                <option value="cd's en dvd's">Cd's en Dvd's</option>
-                <option value="fietsen en brommers">Fietsen en Brommers</option>
-                <option value="sport en fitness">Sport en Fitness</option>
+<form action="searched.php" method="post">
+    <div class="searchbar">
+        <input type="text" name="productname" placeholder="Search..">
+        <select name="rubriek"><br>
+            <option value="elektronica">Alle rubrieken</option>
+            <option value="elektronica">Elektronica</option>
+            <option value="cd's en dvd's">Cd's en Dvd's</option>
+            <option value="fietsen en brommers">Fietsen en Brommers</option>
+            <option value="sport en fitness">Sport en Fitness</option>
+    </select>
+        <select name="afstand">
+            <option value="alle afstanden">Alle afstanden</option>
+            <option value="minder dan 3km">minder dan 3km</option>
+            <option value="minder dan 5km">minder dan 5km</option>
+            <option value="minder dan 10km">minder dan 10km</option>
+            <option value="minder dan 15km">minder dan 15km</option>
+            <option value="minder dan 25km">minder dan 25km</option>
+            <option value="minder dan 50km">minder dan 50km</option>
         </select>
-            <select name="afstand">
-                <option value="alle afstanden">Alle afstanden</option>
-                <option value="minder dan 3km">minder dan 3km</option>
-                <option value="minder dan 5km">minder dan 5km</option>
-                <option value="minder dan 10km">minder dan 10km</option>
-                <option value="minder dan 15km">minder dan 15km</option>
-                <option value="minder dan 25km">minder dan 25km</option>
-                <option value="minder dan 50km">minder dan 50km</option>
-            </select>
-            <input type="submit" name="search" value="Search"> 
-        </div>
-    </form>
+        <input type="submit" name="afstandbtn" value="Search"> 
+    </div>
+</form>
 </header>
 <body>
     <section class="aanmelden">
-        <form id="contact-form" action="#" method="post">
+        <form action="signedup.php" method="post">
             <h1>Aanmelden</h1>
-                 <div class="form">
-                     <input type="text" name="voornaam" placeholder="Vul hier uw voornaam in" required="required" class="form-control">
-                 </div>
-                 <div class="form">
-                     <input type="text" name="achternaam" placeholder="Vul hier uw achternaam in" required="required" class="form-control">
-                 </div>
-                 </fieldset>
-                 <div class="form">
-                     <input type="text" name="email" placeholder="Vul hier uw E-mail in" required="required" class="form-control">
-                 </div>
-                 <div class="form">
-                        <input type="password" name="password" placeholder="Vul hier uw wachtwoord in" required="required" class="form-control">
-                    </div>
-                 <div class="form">
-                     <input type="text" name="telefoonnummer" placeholder="Vul hier uw telefoonnummer in" required="required" class="form-control">
-                 </div>
-                 <div class="form">
-                     <input type="text" name="adres" placeholder="Vul hier uw adres in" required="required" class="form-control">
-                 </div>
-                 <div class="form">
-                     <input type="text" name="woonplaats" placeholder="Vul hier uw woonplaats in" required="required" class="form-control">
-                 </div>
-                 <div class="form">
-                     <input type="text" name="postcode" placeholder="Vul hier uw postcode in" required="required" class="form-control">
-                 </div>
-                 <button class="submit" type="submit" class="submit">Aanmelden</button>
-               </div>
-         </form>
+            <input type="text" name="username" placeholder="Username"><br>
+            <input type="text" name="mail" placeholder="E-mail"><br>
+            <input type="password" name="pwd" placeholder="Password"><br>
+            <input type="password" name="pwd-repeat" placeholder="Repeat password"><br>
+            <input type="submit" value="aanmelden" name="signup-submit">
+        </form>
      </section>
 </body>
 </html>
