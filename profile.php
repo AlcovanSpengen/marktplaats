@@ -1,16 +1,23 @@
+<?php
+// Initialize the session
+session_start();
+
+
+?>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Marktplaats | SignedUp</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,300">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marketplace | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,300">
+</head>
+<body>
     <header>
         <div class="header"><p class="header-title">Marketplace</p></div>
     </header>
-<nav>
+    <nav>
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="login.php">Log in</a></li>
@@ -22,7 +29,7 @@
                 <div class="dropdown-content">
                     <a href="#">My advertisements</a>
                     <a href="#">Favorites</a>
-                    <a href="profile.php">Profile</a>
+                    <a href="#">Profile</a>
                     <a href="logout.php">Sign Out</a>
                 </div>
             </div>
@@ -38,9 +45,12 @@
         </ul>
         
     </nav>
-<body>
-   <p>U hebt gezocht naar:  <?php echo $_POST["productname"] ?></p>
-   <p>In de volgende rubriek: <?php echo $_POST["rubriek"] ?></p>
-   <p>Binnen een afstand van <?php echo $_POST["afstand"] ?>
+    
+
+    <h1>Profile</h1>
+    <p>Hello, <?php echo htmlspecialchars($_SESSION["username"]); ?></p>
+    <p>This is your profile</p>
+    <a href="reset-password.php">Reset Your Password</a>
+    <a href="logout.php">Sign Out of Your Account</a>
 </body>
 </html>

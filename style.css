@@ -1,12 +1,43 @@
 /* GENERAL */
 * {
     font-family: "Roboto Slab", serif;
+    margin: 0
 }
 body {
-    background: rgb(255, 255, 255);
+    background: rgb(206, 76, 76);
+}
+.welcome {
+    text-align: center;
+    margin: 20px;
+}
+
+/* HEADER */
+header {
+    background-image: url("walnuts.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50%;
+    width: 100%;
+    position: relative;
+}
+.header {
+    height: 100px;
+    width: 30%;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.671);
+    border-radius: 20px;
+    margin: auto;
+}
+
+.header-title {
+    font-size: 50px;
+    padding: 15px;
+    text-align: center;
+    color: white;
 }
 h1 {
-    font-size: 25;
+    font-size: 30px;
     text-align: center;
 }
 /* NAV */
@@ -36,7 +67,18 @@ nav li a {
 nav li a:hover {
     background-color: #111;
 }
-
+.loginstatus {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    float: right;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+}
 /* DROPDOWN NAV */
 .dropdown {
     float: left;
@@ -91,9 +133,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     background: gray;
 }
 .searchbar input[type=text] {
-    width: 200px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+    width: 30%;
     margin: 20px;
     padding: 5px;
 }
@@ -106,64 +146,143 @@ nav a:hover, .dropdown:hover .dropbtn {
     margin: 20px;
 }
 
-.searchbar input[type=text]:hover {
-    width: 40%;
-}
 
-/* FORM LOGIN */
+/* Loginform */
 .loginform {
-    padding: 50px;
-    background: rgb(204, 204, 204);
-    border: 2px solid black;
+    padding: 50px 0px;
+    width: 100%;
+    text-align: center;
+}
+.loginform form {
     text-align: center;
 }
 
 .loginform input {
     width: 30%;
     padding: 12px 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid  rgba(51, 51, 51);
 }
 .loginform a {
     padding: 20px;
     margin: 20px;
 }
-.loginform button {
+.loginform input[type=submit] {
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px;
     margin: 20px;
+    width: 200px;
+    
 }
-.loginform button:hover {
-    background-color: rgb(187, 184, 184);
+.loginform input[type=submit]:hover {
+    background-color: rgb(182, 182, 182);
+    cursor: pointer;
 }
-/* FORM SIGNUP */
-.aanmelden {
+
+/* Registerform */
+
+.registerform {
+    padding: 50px 0px;
+    width: 100%;
     text-align: center;
-    padding: 50px;
-    background:  rgb(204, 204, 204);
-    border: 2px solid black;
 }
-.aanmelden input {
+.registerform form {
+    text-align: center;
+}
+
+.registerform input {
     width: 30%;
     padding: 12px 20px;
-    border-radius: 5px;
-    border: 1px solid black;
     margin-bottom: 10px;
-  }
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid  rgba(51, 51, 51);
+}
+.registerform a {
+    padding: 20px;
+    margin: 20px;
+}
+.registerform input[type=submit], input[type=reset] {
+    border: 1px solid black; 
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    width: 150px;
+    
+}
+.registerform input[type=submit]:hover, input[type=reset]:hover {
+    background-color: rgb(182, 182, 182);
+}
 
+/* Resetform */
+.resetform {
+    padding: 50px 0px;
+    width: 100%;
+    text-align: center;
+}
+.resetform form {
+    text-align: center;
+}
+
+.resetform input {
+    width: 30%;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid  rgba(51, 51, 51);
+}
+.resetform a {
+    padding: 20px;
+    margin: 20px;
+}
+.resetform input[type=submit] {
+    border: 1px solid black; 
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    width: 150px;  
+}
+.resetform input[type=submit]:hover, {
+    background-color: rgb(182, 182, 182);
+}
   /* NIEUWE ADVERTENTIE */
 .nieuwadv {
     text-align: center;
-    padding: 50px;
-    background:  rgb(204, 204, 204);
-    border: 2px solid black;
+    padding: 50px 0px;
+    width: 100%;
 }
-.nieuwadv form input {
-    margin: 5px;
-    
+.nieuwadv form {
+    text-align: center;
 }
-.nieuwadv h2 {
-    font-size: 20;
+.nieuwadv input {
+    width: 30%;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid  rgba(51, 51, 51);
+}
+.nieuwadv select, textarea {
+    width: 30%;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid  rgba(51, 51, 51);
+}
+.nieuwadv input[type=submit] {
+    border: 1px solid black; 
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    width: 150px;  
+}
+.nieuwadv input[type=submit]:hover {
+    background-color: rgb(182, 182, 182);
 }
 .thumb-image {
     width: 200px;
