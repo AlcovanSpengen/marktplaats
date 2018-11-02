@@ -2,6 +2,11 @@
 // Initialize the session
 session_start();
 
+include 'dbh.php';
+include 'product.php';
+include 'viewproduct.php';
+include 'getfirst.php';
+include 'viewfirst.php';
 ?>
 
 <html>
@@ -68,6 +73,57 @@ session_start();
     </form>
 
     <h1>Home</h1>
-           
+    <section class="product-container">
+    
+    <div class="product-display">
+        <p class="display-title">Product Display</p>
+        <div class="products">
+            <?php
+            $products = new ViewProduct();
+            $products->showAllProducts();
+            ?>
+        </div>
+    </div>
+    <div class="recent-product">
+        <p>Most recent added product</p>
+        <div class="products">
+            <?php  
+            $first = new Viewfirst();
+            $first->showvirst();
+            ?>
+        </div>
+    </div>
+    </section>
+    <h1>Gallery</h1>
+    <section class="gallery-container">
+        <div class="cases-container">
+
+        <?php
+        include_once 'database.php';
+
+        $sql = "SELECT * FROM gallery ORDER BY orderGallery DESC";
+        $stmt = mysqli_stmt_init($conn);
+        if (!mysqli_stmt_prepare($stmt, $sql)) {
+            echo "SQL statement failed hahahaha!";
+        }
+        else {
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
+
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo '<a href="#">
+                        <div class="case">
+                            <div class="upload-image" style="background-image: url(img/gallery/'.$row["imgFullNameGallery"].');"></div>
+                                <div class="caseTitle">
+                                <h3>'.$row["titleGallery"].'</h3>
+                                <p>'.$row["descGallery"].'</p>
+                            </div>
+                        </div>
+                    </a>';
+            }
+        }
+        ?>
+    </div>
+    </section>
 </body>
 </html>

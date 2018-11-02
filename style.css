@@ -284,14 +284,95 @@ nav a:hover, .dropdown:hover .dropbtn {
 .nieuwadv input[type=submit]:hover {
     background-color: rgb(182, 182, 182);
 }
-.thumb-image {
-    width: 200px;
-    position: relative;
-    padding: 5px;
-    background: black;
-   }
 
-#image-holder {
-    background: rgb(167, 163, 163);
+.gallery-upload {
+    width: 100%;
+    text-align: center;
+}
+.gallery-upload input {
+    width: 30%;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid  rgba(51, 51, 51);
+}
+.gallery-upload button {
+    border: 1px solid black; 
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    width: 150px;  
+}
+#blah {
+    width:180px;
+  }
+
+/* Product Display */
+.product-container {
+    width: 100%;
+}
+.product-display {
+    width: 300px;
+    height: 350px;
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 50px auto;
+}
+.products {
+    margin: auto;
+    padding: 20px;
+}
+.display-title {
+    padding: 20px;
 }
 
+.recent-product {
+    background: white;
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 30%;
+    height: 100px;
+    padding: 30px;
+}
+
+/* Gallery */
+
+.gallery-container {
+    text-align: center;
+}
+.gallery-container a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.upload-image {
+    width: 350px;
+    height: 300px;
+    margin: 0px 40px;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cases-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.caseTitle {
+    width: 350px;
+    margin: 10px 40px 40px 40px;
+    text-align: center;
+}
+
+.gallery-upload {
+    width: 100%;
+    height: 100px;
+    }
+
+    

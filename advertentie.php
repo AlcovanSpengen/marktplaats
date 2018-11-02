@@ -14,12 +14,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Marktplaats | Inlogpagina</title>
+        <title>Marktplaats | New Advertisement</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,300">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="javascript.js"></script>
     </head>
+    <body>
     <header>
         <div class="header"><p class="header-title">Marketplace</p></div>
     </header>
@@ -52,7 +53,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         
     </nav>
 
-<body>
+
     <h1>New Advertisement</h1>
     <section class="nieuwadv">
         <form action="geplaatst.php" method="post" enctype="multipart/form-data">
@@ -66,17 +67,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <input type="text" name="naamadvertentie" placeholder="Title" required><br>
                 <textarea name="beschrijvingadvertentie" placeholder="Description" rows="5" cols="30" required></textarea><br>
                 <input type="text" name="prijs" placeholder="Price">
-            <h2>Upload Foto's(met preview)</h2>
+            <h2>Upload Foto</h2>
                 <div id="wrapper">
                     <input id="fileUpload" name="fileUpload" type="file" multiple />
                     <br />
                     <div id="image-holder"></div>
                 </div>
-                <input type="submit" value="Place Advertisement" name="submit">
-
-            
+                <input type="submit" value="Place Advertisement" name="submit">      
         </form>
     </section>
+    <div class="gallery-upload">
+        <h3>PHP File upload (Size &lt; 10mb, File types: jpg, jpeg, png)</h3>
+        <form action="gallery-upload.php" method="post" enctype="multipart/form-data">
+            <input type="text" name="filename" placeholder="File name..."><br />
+            <input type="text" name="filetitle" placeholder="Image title..."><br />
+            <input type="text" name="filedesc" placeholder="File description..."><br />
+            <input type="hidden" name="MAX_FILE_SIZE" value="9999999" /><br />
+            <input type="file" onchange="readURL(this);" name="file"><br />
+            <img id="blah" src="http://placehold.it/180" alt="your image" />
+            <button type="submit" name="submit">Upload</button>
+        </form>
+    </div>
     
     <script src="javascript.js"></script>
 </body>
